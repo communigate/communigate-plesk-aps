@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:files xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://apstandard.com/ns/1">
+    <ns2:file sha256="3c853414f3ca1ca7207232c1fd102dc40bdde44cf87ba682860cfdede9cf1e5c" size="2799" name="images/CGPLogo.gif"/>
+    <ns2:file sha256="082ae8abb750b1508cfecbc3b5b2bb4322f1209fe08925db29a7ba286841a8b2" size="1056" name="htdocs/test.php"/>
+    <ns2:file sha256="7d5473dfb743f6ba3bfcba4886decd64ec9630a5cebbf3a582b6baf8b6ecf9cf" size="3152" name="htdocs/license.txt"/>
+    <ns2:file sha256="9def7334c91a240fc8fe300742fc0c1f64fd338124e41df8ce347c227b588465" size="189" name="htdocs/lib/CommunigateApi/ApiException.php"/>
+    <ns2:file sha256="020f433c9a0e71e5cefe68aa95c8576ae99724123ec488c6635f50c6eb11b7f9" size="25939" name="htdocs/lib/CommunigateApi/Api.php"/>
+    <ns2:file sha256="eb6d356a0d3c45f3a2211bc3cbf1282de581260d315ebb3276dc452fee0c0074" size="2179" name="APP-META.xml"/>
+</ns2:files>

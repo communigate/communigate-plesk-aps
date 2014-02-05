@@ -1,0 +1,10 @@
+Installing Instructions:
+
+In order to install APS application and make it available to customers you need to:
+
+1. Login in plesk panel as administrator.
+2. Go to Server Management > Tools&Settings.
+3. Under Applications & Databases select Application Vault
+4. Go to the tab 'My Apps'  and click on 'Add App'
+5. Click on 'Choose Flie' and navigate to where you downloaded communigate-aps.app.zip
+6. Click 'OK' and the application should be available for installation forthe users of the plesk panel.

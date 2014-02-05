@@ -1,0 +1,64 @@
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://apstandard.com/ns/1" version="1.2">
+    <id>http://www.communigate.com/</id>
+    <name>CommuniGate Pro</name>
+    <version>1.0</version>
+    <release>1</release>
+    <presentation>
+    	<summary>Communigate Pro API</summary>
+    	<description>Lorem ipsum dolor sit amet...</description>
+    	<icon path="images/CGPLogo.gif" />
+    	<categories>
+	   		<category>Collaboration/Email</category>
+	   	</categories>
+	   	<languages>
+    		<language>en</language>
+    	</languages>
+    </presentation>
+    <global-settings>
+    	<setting type="host-name" id="server_url" default-value="77.77.150.135:1106">
+    		<name>Server URL:</name>
+    		<description>Lorem ipsum dolor sit amet.</description>
+    	</setting>
+    	<setting type="string" id="server_user" default-value="postmaster">
+    		<name>Username</name>
+    		<description>Lorem ipsum dolor sit amet.</description>
+    	</setting>
+    	<setting type="string" id="server_pass" default-value="cp@nel" min-length="1">
+    		<name>Password</name>
+    		<description>Lorem ipsum dolor sit amet.</description>
+    	</setting>
+   	</global-settings>
+    <service id="CommuniGate Pro">
+    	<license must-accept="true">
+    		<commercial />
+    		<text>
+    			<name>License</name>
+    			<file>htdocs/license.txt</file>
+    		</text>
+    	</license>
+    	<presentation>
+    		<infolinks>
+    			<link href="http://www.communigate.com/">Communigate Pro</link>
+    		</infolinks>
+    		<entry-points>
+    			<entry dst="index.php">
+    				<label>CommuniGate</label>
+    			</entry>
+    		</entry-points>
+    	</presentation>
+    	<requirements xmlns:php="http://apstandard.com/ns/1/php">
+    		<php:version min="5.3.0"/>
+    	</requirements>
+    	<provision xmlns:php="http://apstandard.com/ns/1/php">
+    		<url-mapping>
+                <default-prefix>CommuniGate</default-prefix>
+    			<mapping url="/" path="htdocs">
+    				<php:handler>
+    					<php:extension>php</php:extension>
+    				</php:handler>
+    				<php:permissions writable="true"/>
+    			</mapping>
+    		</url-mapping>
+    	</provision>
+    </service>
+</application>
