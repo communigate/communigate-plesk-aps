@@ -31,11 +31,11 @@ class TbAlert extends CWidget
 	/**
 	 * @var boolean indicates whether the alert should be an alert block. Defaults to 'true'.
 	 */
-	public $block = true;
+	public $block = false;
 	/**
 	 * @var boolean indicates whether alerts should use transitions. Defaults to 'true'.
 	 */
-	public $fade = true;
+	public $fade = false;
 	/**
 	 * @var string[] the Javascript event handlers.
 	 */

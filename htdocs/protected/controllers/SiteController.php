@@ -169,6 +169,35 @@ class SiteController extends Controller
 	{
 		$this->render('VoIP');
 	}
+
+	public function actionEmailArchiving()
+	{
+	
+		// include the javascript that preselects
+		// the option for the dropdown
+		$baseUrl = Yii::app()->baseUrl; 
+		$cs = Yii::app()->getClientScript();
+		$cs->registerScriptFile($baseUrl.'/js/preselect.js');
+
+		$cli = $this->ConnectToCG();
+		$domain = Yii::app()->params['domain'];
+
+		$model = new EmailArchivingForm;
+
+		if (isset($_POST['EmailArchivingForm'])) {
+			$model->attributes = $_POST['EmailArchivingForm'];
+			if ($model->validate()) {
+				$model->setEmailArchiving();
+				Yii::app()->user->setFlash('success', '<strong>Done!</strong> Settings changed.');
+				$this->redirect(array('site/index'));
+			}
+		}
+
+		$this->render('emailArchiving', array(
+			'model' => $model,
+			'settings' => $cli->GetAccountDefaults($domain)
+			));
+	}
 	
 	/**
 	 * This is a helper method for getting the
@@ -185,7 +214,7 @@ class SiteController extends Controller
 
 		$defaults = $cli->GetAccountDefaults("$domain");
 
-		if (empty($defaults)) {
+		if (empty($defaults["ServiceClasses"])) {
 			$sc = array_keys($serverDefaults["ServiceClasses"]);
 			return array_combine($sc, $sc);
 		} else {
@@ -203,7 +232,6 @@ class SiteController extends Controller
 	// {
 	// 	$model = new ServerConfigForm;
 
-
 	// 	if(isset($_POST['ServerConfigForm']))
 	// 	{
 	// 		$model->attributes=$_POST['ServerConfigForm'];
@@ -213,14 +241,18 @@ class SiteController extends Controller
 	// 		}
 	// 	}
 	// 	$this->render('configureServer',array('model'=>$model));
-	// }
+	// }	
+
     private function getDefaultAddressSettings()
     {
 		$domain = Yii::app()->params['domain'];
 		$cli = $this->ConnectToCG();
         // $cli->setDebug(1);
         $settings = $cli->GetDomainSettings($domain);
-        return array('MailToUnknown' => $settings['MailToUnknown'], 'MailRerouteAddress' => $settings['MailRerouteAddress']);
+        if (isset($settings['MailToUnknown'])) {
+        	return array('MailToUnknown' => $settings['MailToUnknown'], 'MailRerouteAddress' => $settings['MailRerouteAddress']);
+        }
+        
     }
 
 	private function ConnectToCG($value='')
@@ -235,8 +267,5 @@ class SiteController extends Controller
 
 		return $cli;
 	}
-
-
-
 }
 ?>

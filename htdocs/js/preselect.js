@@ -30,8 +30,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var dropdownDefaultAddresses = $("select[name='DefaultAddressesForm[setDefaultBehavior]']"),
             defaultAddressesOption = dropdownDefaultAddresses.attr('id');
 
+        var dropdownArchiveAfter = $("select[name='EmailArchivingForm[archiveMessageAfter]']"),
+            archiveAfterOption = dropdownArchiveAfter.attr('id');
+
+        var dropdownDeleteAfter = $("select[name='EmailArchivingForm[deleteMessageAfter]']"),
+            deleteAfterOption = dropdownDeleteAfter.attr('id');
+
         jQuery(dropdown).selectOptionWithText(optionToSelect);
         jQuery(dropdownDefaultAddresses).selectOptionWithText(defaultAddressesOption);
+        
+        jQuery(dropdownArchiveAfter).selectOptionWithText(archiveAfterOption);
+        jQuery(dropdownDeleteAfter).selectOptionWithText(deleteAfterOption);
 
 }
 });

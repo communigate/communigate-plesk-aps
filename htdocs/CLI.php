@@ -1096,7 +1096,7 @@ if(!defined('PHP_CGP_CLI_CLASS')) {
                 $err .= '   $cli->SetAccountDefaults(array $AccountDefaults);'."\n";
                 die("$err");
             } else {
-                $command = 'STACNDFL '.$params["domainName"];
+                $command = 'SetAccountDefaults '.$params["domainName"];
                 if(is_array($params["settings"]))
                     $command .= ' '.$this->printWords($params["settings"]);
                 $this->send($command);
