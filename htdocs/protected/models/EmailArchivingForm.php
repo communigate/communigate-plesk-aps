@@ -49,8 +49,4 @@ class EmailArchivingForm extends CFormModel
 		$cli->Login($host,$port,$login,$password);
 		return $cli;
 	}
-
-
-
-
 }

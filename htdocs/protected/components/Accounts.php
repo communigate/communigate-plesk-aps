@@ -193,7 +193,6 @@ class Accounts extends CComponent
 		} else {
 			return new CArrayDataProvider(array());
 		}
-
 	}
 
 }

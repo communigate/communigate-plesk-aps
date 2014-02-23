@@ -170,6 +170,11 @@ class SiteController extends Controller
 		$this->render('VoIP');
 	}
 
+	
+	/**
+	 * action for manipulating email archiving
+	 * view is in /bootstrap/views/site/emailArchiving.php
+	 */
 	public function actionEmailArchiving()
 	{
 	

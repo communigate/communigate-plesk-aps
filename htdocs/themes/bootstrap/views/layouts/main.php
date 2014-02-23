@@ -29,6 +29,7 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
                 array('label'=>'Mobile Devices', 'url'=>array('/site/MobileDevices')),
                 array('label'=>'VoIP', 'url'=>array('/site/VoIP')),
                 array('label'=>'Email Archiving', 'url'=>array('/site/emailArchiving')),
+                array('label'=>'Group', 'url'=>array('/group/index')),
                 // array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
     //             array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),
