@@ -1,3 +1,5 @@
 *~
 /local
 *.orig
+._*
+/htdocs/assets

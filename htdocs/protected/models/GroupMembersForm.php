@@ -27,7 +27,6 @@ class GroupMembersForm extends CFormModel
 	public function addMember($group)
 	{
 		$cli = $this->ConnectToCG();
-		$cli->setDebug(1);
 		$members = $cli->GetGroup($group);
 		$members = $members['Members'];
 		if ($members == 'NO') {

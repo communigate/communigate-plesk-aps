@@ -595,7 +595,7 @@ if(!defined('PHP_CGP_CLI_CLASS')) {
         function GetAccountRPOP($accountName) {
             if($accountName == '')
                 die('usage: $cli->GetAccountRPOP(string $accountName)'."\n");
-            $this->send('GetAccountRPOP '.$accountName);
+            $this->send('GETACCOUNTRPOPS '.$accountName);
             $this->_parseResponse();
             if($this->isSuccess()) {
                 return $this->parseWords($this->getWords());
@@ -605,7 +605,7 @@ if(!defined('PHP_CGP_CLI_CLASS')) {
         function SetAccountRPOP($accountName,$details) {
             if($accountName == '' || !is_array($details))
                 die('usage: $cli->SetAccountRPOP(string $accountName, array $details)'."\n");
-            $this->send('SetAccountRPOP '.$accountName.' '.$this->printWords($details));
+            $this->send('SetAccountRPOPs '.$accountName.' '.$this->printWords($details));
             $this->_parseResponse();
         }
 

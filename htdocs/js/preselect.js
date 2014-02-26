@@ -36,11 +36,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var dropdownDeleteAfter = $("select[name='EmailArchivingForm[deleteMessageAfter]']"),
             deleteAfterOption = dropdownDeleteAfter.attr('id');
 
+        var dropdownPullEvery = $("select[name='AddRpopForm[pullEvery]']"),
+            pullEveryOption = dropdownPullEvery.attr('data');
+
         jQuery(dropdown).selectOptionWithText(optionToSelect);
         jQuery(dropdownDefaultAddresses).selectOptionWithText(defaultAddressesOption);
         
         jQuery(dropdownArchiveAfter).selectOptionWithText(archiveAfterOption);
         jQuery(dropdownDeleteAfter).selectOptionWithText(deleteAfterOption);
 
+        jQuery(dropdownPullEvery).selectOptionWithText(pullEveryOption);
+
+        if ($('#AddRpopForm_apop').attr('value') == 0 || $('#AddRpopForm_apop').attr('value') == 'YES') $('#AddRpopForm_apop').prop('checked', true);
+        if ($('#AddRpopForm_leaveMessageOnServer').attr('value') == 0 || $('#AddRpopForm_leaveMessageOnServer').attr('value') == 'YES') $('#AddRpopForm_leaveMessageOnServer').prop('checked', true);
+        if ($('#AddRpopForm_tls').attr('value') == 0 || $('#AddRpopForm_tls').attr('value') == 'YES') $('#AddRpopForm_tls').prop('checked', true);
+        
 }
 });

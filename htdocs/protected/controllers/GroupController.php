@@ -24,7 +24,11 @@ class GroupController extends Controller
 			));
 	}
 
-
+	/**
+	 * Action for for rendering view with all the group members
+	 * and droupdown to add more group members
+	 * @param  string $group the name of the group with added domain
+	 */
 	public function actionGroupMembers($group)
 	{
 		
@@ -54,6 +58,11 @@ class GroupController extends Controller
 			));
 	}
 
+	/**
+	 * Action for removign a member of a group
+	 * @param  int $member the number of the group member in the array of members
+	 * @param  string $group  group name with domain added
+	 */
 	public function actionremoveGroupMembers($member, $group)
 	{
 		$domain = Yii::app()->params['domain'];
@@ -61,6 +70,9 @@ class GroupController extends Controller
 		$groupObj->removeMember($member, $group);
 	}
 
+	/**
+	 * Action for creating groups
+	 */
 	public function actionCreate()
 	{
 		$model = new CreateGroupForm;
@@ -72,14 +84,10 @@ class GroupController extends Controller
 
 		}
 
-
 		$this->render('create', array(
 			'model' => $model
 			));
 	}
-
-
-
 
 	/**
 	 * Action for changing settings of groups

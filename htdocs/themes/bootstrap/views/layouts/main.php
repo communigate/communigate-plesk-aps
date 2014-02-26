@@ -30,8 +30,7 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
                 array('label'=>'VoIP', 'url'=>array('/site/VoIP')),
                 array('label'=>'Email Archiving', 'url'=>array('/site/emailArchiving')),
                 array('label'=>'Group', 'url'=>array('/group/index')),
-                // array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-    //             array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                array('label'=>'Remote POP', 'url'=>array('/remotePop/index')),
             ),
         ),
         // '<a href="'.    Yii::app()->createUrl("site/configureServer")  . '"'.
