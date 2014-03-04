@@ -9,5 +9,39 @@
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 20px;
+}
+.paramClass {
+	position: relative;
+	bottom: 50px;
+}
+.operClass {
+	position: relative;
+	bottom: 50px;
+	left: 230px;
+}
+.dataParamClass{
+	width:437px;
+}
 
+.operationButtons {
+	display: inline;
+	position: relative;
+	left: 655px;
+	bottom: 127px;
+}
+.test {
+	overflow: hidden;
+	height: 80px;
+	margin-bottom: 30px;
+}
+.operationButtonsAction{
+		display: inline;
+	position: relative;
+	left: 655px;
+	bottom: 101px;
+}
+
+.actionsClass{
+	height: 30px;
+	margin-bottom: 30px;
 }

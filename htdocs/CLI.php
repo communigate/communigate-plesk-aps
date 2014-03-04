@@ -588,7 +588,7 @@ if(!defined('PHP_CGP_CLI_CLASS')) {
         function SetAccountRules($accountName,$rules) {
             if($accountName == '' || !is_array($rules))
                 die('usage: $cli->SetAccountRules(string $accountName, array $rules)'."\n");
-            $this->send('STACNTRL '.$accountName.' '.$this->printWords($rules));
+            $this->send('SetAccountRules '.$accountName.' '.$this->printWords($rules));
             $this->_parseResponse();
         }
         

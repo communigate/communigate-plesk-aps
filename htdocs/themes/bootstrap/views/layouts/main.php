@@ -26,11 +26,12 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
             'items'=>array(
                 array('label'=>'Accounts', 'url'=>array('/site/index')),
                 array('label'=>'Mailing Lists', 'url'=>array('/mailingList/index')),
-                array('label'=>'Mobile Devices', 'url'=>array('/site/MobileDevices')),
-                array('label'=>'VoIP', 'url'=>array('/site/VoIP')),
+                // array('label'=>'Mobile Devices', 'url'=>array('/site/MobileDevices')),
+                // array('label'=>'VoIP', 'url'=>array('/site/VoIP')),
                 array('label'=>'Email Archiving', 'url'=>array('/site/emailArchiving')),
                 array('label'=>'Group', 'url'=>array('/group/index')),
                 array('label'=>'Remote POP', 'url'=>array('/remotePop/index')),
+                array('label' => 'User Level Filtering', 'url' => array('/filter/index')),
             ),
         ),
         // '<a href="'.    Yii::app()->createUrl("site/configureServer")  . '"'.
