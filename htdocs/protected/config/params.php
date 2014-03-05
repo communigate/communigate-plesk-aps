@@ -6,12 +6,13 @@ return CMap::mergeArray(
         $arr,
         array(
 		'adminEmail'=>'webmaster@example.com',
-	// // 	'webmail' => 'http://77.77.150.135:8100/',
+		'webmail' => 'http://77.77.150.135:8100/',
 	// 	'host' => '77.77.150.135',
 	// 	// 'port' => 11106,
 	// 	'login' => 'postmaster',
 	// 	'password' => 'jR6]FKhi',
-		'domain' => $_SERVER['HTTP_HOST']
+		'domain' => $_SERVER['HTTP_HOST'],
+		'prontoDrive' => 'https://drive.cmailpro.net/',
         )
     )
 ;

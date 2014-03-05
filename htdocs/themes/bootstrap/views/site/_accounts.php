@@ -12,9 +12,9 @@ $this->widget('bootstrap.widgets.TbGridView', array(
     array('name'=>'type', 'header'=>'Type'),
     array('name' => 'usage', 'header' => 'Usage'),
     array(
-      'template' => '{email} {update} {delete}',
+      'template' => '{email} {prontoDrive} {update} {delete}',
       'class'=>'bootstrap.widgets.TbButtonColumn',
-      'htmlOptions'=>array('style'=>'width: 50px'),
+      'htmlOptions'=>array('style'=>'width: 70px'),
       'updateButtonUrl'=> 'Yii::app()->createUrl(\'site/updateAccount\', array(\'account\' =>   substr($data[\'account\'], 0, strpos($data[\'account\'], \' \')) == \'\' ? $data[\'account\'] : substr($data[\'account\'], 0, strpos($data[\'account\'], \' \')) ))',
       'deleteButtonUrl'=>'Yii::app()->createUrl(\'site/delete\', array(\'account\' => substr($data[\'account\'], 0, strpos($data[\'account\'], \' \')) == \'\' ? $data[\'account\'] : substr($data[\'account\'], 0, strpos($data[\'account\'], \' \')) ))',
       'buttons' => array(
@@ -24,13 +24,17 @@ $this->widget('bootstrap.widgets.TbGridView', array(
           'options'=>array("class"=>"icon-envelope", 'rel'=> 'tooltip', 'data-original-title'=>"Webmail" ),
           'url'=>'Yii::app()->createUrl("site/redirectToWebmail", array("account"=>$data[\'account\']))',
         ),
+        'prontoDrive' => array(
+          'label'=>'',
+          'imageUrl'=> Yii::app()->getBaseUrl(true). '/images/cgpro_prontodrive.png',
+          'options'=>array('rel'=> 'tooltip', 'data-original-title'=>"Pronto Drive"),
+          'url'=>'Yii::app()->createUrl("site/redirectToProntoDrive", array("account"=>$data[\'account\']))',
+        ),
       ),
     ),
 
   ),
 ));
-
-// echoCHtml::link('Yii Framework Website', "http://www.yiiframework.com");
 
 $this->widget('bootstrap.widgets.TbButton',array(
   'label' => 'Create Account',
@@ -40,4 +44,3 @@ $this->widget('bootstrap.widgets.TbButton',array(
   'htmlOptions'=>array('class'=>"pull-left"),
   ));?>
 </p>
-

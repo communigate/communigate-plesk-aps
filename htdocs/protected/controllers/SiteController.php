@@ -233,6 +233,11 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->params['webmail']);
 	}
 
+	public function actionRedirectToProntoDrive()
+	{
+		$this->redirect(Yii::app()->params['prontoDrive']);
+	}
+
 	// public function actionConfigureServer()
 	// {
 	// 	$model = new ServerConfigForm;
